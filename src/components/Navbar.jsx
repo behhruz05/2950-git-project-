@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../assets/hero.png'
+
 const Navbar = () => {
     return (
         <div>
@@ -25,7 +25,7 @@ const Navbar = () => {
       <div className="px-6 py-3 flex items-center gap-4">
 
         <div className="flex items-center gap-2 ">
-          <img src={logo} alt="Logo" className="w-10  " />
+        
         </div>
 
         <div className="flex flex-1 border border-green-600 rounded-md overflow-hidden">
