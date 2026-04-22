@@ -1,5 +1,5 @@
-import React from "react";  
-import img1 from "../assets/img1.png";
+import React from "react";
+import img from "../assets/img1.png";
 
 const ShopProducts = [
   {
