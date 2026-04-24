@@ -1,6 +1,55 @@
 import React from "react";
 
 function Footer() {
+  const companyLinks = [
+    { name: "About Us", path: "/about" },
+    { name: "Delivery Information", path: "/delivery" },
+    { name: "Privacy Policy", path: "/privacy-policy" },
+    { name: "Terms & Conditions", path: "/terms" },
+    { name: "Contact Us", path: "/contact" },
+    { name: "Support Center", path: "/support" },
+    { name: "Careers", path: "/careers" },
+  ];
+
+  const accountLinks = [
+    { name: "Sign In", path: "/signin" },
+    { name: "View Cart", path: "/cart" },
+    { name: "My Wishlist", path: "/wishlist" },
+    { name: "Track My Order", path: "/track-order" },
+    { name: "Help Ticket", path: "/help-ticket" },
+    { name: "Shipping Details", path: "/shipping" },
+    { name: "Compare products", path: "/compare" },
+  ];
+
+  const corporateLinks = [
+    { name: "Become a Vendor", path: "/vendor" },
+    { name: "Affiliate Program", path: "/affiliate" },
+    { name: "Farm Business", path: "/farm-business" },
+    { name: "Farm Careers", path: "/farm-careers" },
+    { name: "Our Suppliers", path: "/suppliers" },
+    { name: "Accessibility", path: "/accessibility" },
+    { name: "Promotions", path: "/promotions" },
+  ];
+
+  const popularLinks = [
+    { name: "Milk & Flavoured Milk", path: "/category/milk" },
+    { name: "Butter and Margarine", path: "/category/butter" },
+    { name: "Eggs Substitutes", path: "/category/eggs" },
+    { name: "Marmalades", path: "/category/marmalades" },
+    { name: "Sour Cream and Dips", path: "/category/sour-cream" },
+    { name: "Tea & Kombucha", path: "/category/tea" },
+    { name: "Cheese", path: "/category/cheese" },
+  ];
+
+  // O'zingni manziling koordinatasini yozasan
+  const latitude = 41.311081;
+  const longitude = 69.240562;
+
+  const googleMapEmbed = `https://www.google.com/maps?q=${latitude},${longitude}&z=15&output=embed`;
+  const googleMapOpen = `https://www.google.com/maps?q=${latitude},${longitude}`;
+  const yandexMapOpen = `https://yandex.uz/maps/?ll=${longitude}%2C${latitude}&z=15`;
+  const yandexNavigatorRoute = `yandexnavi://build_route_on_map?lat_to=${latitude}&lon_to=${longitude}`;
+
   return (
     <footer className="bg-[#f7f7f7] text-[#253D4E] mt-10">
       <div className="max-w-[1500px] mx-auto px-8 pt-12">
@@ -24,52 +73,64 @@ function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Company</h3>
             <ul className="space-y-2 text-sm">
-              <li className="hover:text-[#3BB77E] cursor-pointer">About Us</li>
-              <li className="hover:text-[#3BB77E] cursor-pointer">Delivery Information</li>
-              <li className="hover:text-[#3BB77E] cursor-pointer">Privacy Policy</li>
-              <li className="hover:text-[#3BB77E] cursor-pointer">Terms & Conditions</li>
-              <li className="hover:text-[#3BB77E] cursor-pointer">Contact Us</li>
-              <li className="hover:text-[#3BB77E] cursor-pointer">Support Center</li>
-              <li className="hover:text-[#3BB77E] cursor-pointer">Careers</li>
+              {companyLinks.map((item) => (
+                <li key={item.name}>
+                  <a
+                    href={item.path}
+                    className="hover:text-[#3BB77E] transition"
+                  >
+                    {item.name}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div>
             <h3 className="font-semibold mb-4">Account</h3>
             <ul className="space-y-2 text-sm">
-              <li className="hover:text-[#3BB77E] cursor-pointer">Sign In</li>
-              <li className="hover:text-[#3BB77E] cursor-pointer">View Cart</li>
-              <li className="hover:text-[#3BB77E] cursor-pointer">My Wishlist</li>
-              <li className="hover:text-[#3BB77E] cursor-pointer">Track My Order</li>
-              <li className="hover:text-[#3BB77E] cursor-pointer">Help Ticket</li>
-              <li className="hover:text-[#3BB77E] cursor-pointer">Shipping Details</li>
-              <li className="hover:text-[#3BB77E] cursor-pointer">Compare products</li>
+              {accountLinks.map((item) => (
+                <li key={item.name}>
+                  <a
+                    href={item.path}
+                    className="hover:text-[#3BB77E] transition"
+                  >
+                    {item.name}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div>
             <h3 className="font-semibold mb-4">Corporate</h3>
             <ul className="space-y-2 text-sm">
-              <li className="hover:text-[#3BB77E] cursor-pointer">Become a Vendor</li>
-              <li className="hover:text-[#3BB77E] cursor-pointer">Affiliate Program</li>
-              <li className="hover:text-[#3BB77E] cursor-pointer">Farm Business</li>
-              <li className="hover:text-[#3BB77E] cursor-pointer">Farm Careers</li>
-              <li className="hover:text-[#3BB77E] cursor-pointer">Our Suppliers</li>
-              <li className="hover:text-[#3BB77E] cursor-pointer">Accessibility</li>
-              <li className="hover:text-[#3BB77E] cursor-pointer">Promotions</li>
+              {corporateLinks.map((item) => (
+                <li key={item.name}>
+                  <a
+                    href={item.path}
+                    className="hover:text-[#3BB77E] transition"
+                  >
+                    {item.name}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div>
             <h3 className="font-semibold mb-4">Popular</h3>
             <ul className="space-y-2 text-sm">
-              <li className="hover:text-[#3BB77E] cursor-pointer">Milk & Flavoured Milk</li>
-              <li className="hover:text-[#3BB77E] cursor-pointer">Butter and Margarine</li>
-              <li className="hover:text-[#3BB77E] cursor-pointer">Eggs Substitutes</li>
-              <li className="hover:text-[#3BB77E] cursor-pointer">Marmalades</li>
-              <li className="hover:text-[#3BB77E] cursor-pointer">Sour Cream and Dips</li>
-              <li className="hover:text-[#3BB77E] cursor-pointer">Tea & Kombucha</li>
-              <li className="hover:text-[#3BB77E] cursor-pointer">Cheese</li>
+              {popularLinks.map((item) => (
+                <li key={item.name}>
+                  <a
+                    href={item.path}
+                    className="hover:text-[#3BB77E] transition"
+                  >
+                    {item.name}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -81,12 +142,23 @@ function Footer() {
             </p>
 
             <div className="flex flex-col gap-3 mb-4">
-              <button className="border rounded-md px-3 py-2 bg-white hover:shadow">
+              <a
+                href="https://play.google.com/"
+                target="_blank"
+                rel="noreferrer"
+                className="border rounded-md px-3 py-2 bg-white hover:shadow text-center"
+              >
                 Get it on Google Play
-              </button>
-              <button className="border rounded-md px-3 py-2 bg-white hover:shadow">
+              </a>
+
+              <a
+                href="https://www.apple.com/app-store/"
+                target="_blank"
+                rel="noreferrer"
+                className="border rounded-md px-3 py-2 bg-white hover:shadow text-center"
+              >
                 Download on the App Store
-              </button>
+              </a>
             </div>
 
             <p className="text-sm text-gray-500 mb-2">
@@ -98,6 +170,54 @@ function Footer() {
               <span className="border px-2 py-1 rounded bg-white text-xs">MasterCard</span>
               <span className="border px-2 py-1 rounded bg-white text-xs">Maestro</span>
               <span className="border px-2 py-1 rounded bg-white text-xs">PayPal</span>
+            </div>
+          </div>
+
+          {/* BO'SH JOYGA MAP SECTION */}
+          <div className="lg:col-span-2 bg-white rounded-xl p-4 shadow-sm border">
+            <h3 className="font-semibold mb-3">Our Location</h3>
+
+            <div className="w-full h-[220px] rounded-lg overflow-hidden border">
+              <iframe
+                title="store-location"
+                src={googleMapEmbed}
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                loading="lazy"
+                allowFullScreen
+              ></iframe>
+            </div>
+
+            <p className="text-sm text-gray-600 mt-3">
+              5171 W Campbell Ave Kent, Utah
+            </p>
+
+            <div className="flex flex-wrap gap-3 mt-4">
+              <a
+                href={googleMapOpen}
+                target="_blank"
+                rel="noreferrer"
+                className="bg-[#3BB77E] text-white px-4 py-2 rounded-md hover:opacity-90"
+              >
+                Open Map
+              </a>
+
+              <a
+                href={yandexMapOpen}
+                target="_blank"
+                rel="noreferrer"
+                className="border border-[#3BB77E] text-[#3BB77E] px-4 py-2 rounded-md hover:bg-[#3BB77E] hover:text-white"
+              >
+                Open in Yandex Map
+              </a>
+
+              <a
+                href={yandexNavigatorRoute}
+                className="border border-black text-black px-4 py-2 rounded-md hover:bg-black hover:text-white"
+              >
+                Yandex Navigator Route
+              </a>
             </div>
           </div>
         </div>
