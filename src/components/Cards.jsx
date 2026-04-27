@@ -32,7 +32,7 @@ export default function App() {
         {products.map((item) => (
           <div
             key={item.id}
-            className="bg-white rounded-2xl p-4 shadow-sm hover:shadow-md transition relative"
+            className="relative rounded-2xl bg-white p-4 shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl"
           >
             {/* BADGE */}
             <span className="absolute top-3 left-3 bg-green-500 text-white text-xs px-2 py-[2px] rounded-md">
