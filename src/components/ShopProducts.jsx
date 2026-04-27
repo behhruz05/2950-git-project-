@@ -1,7 +1,7 @@
 import React from "react";
 import img from "../assets/img1.jpg";
 
-const ShopProducts = [
+const products = [
   {
     id: 1,
     title: "Top Selling",
@@ -112,7 +112,7 @@ const ShopProducts = [
   },
 ];
 
-const Navbar = () => {
+const ShopProducts = () => {
   return (
     <section className="bg-white px-5 py-4 md:px-10 lg:px-16">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-x-10 gap-y-6 sm:grid-cols-2 xl:grid-cols-4">
