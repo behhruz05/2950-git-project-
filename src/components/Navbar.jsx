@@ -42,20 +42,6 @@ const Navbar = () => {
         <div className="flex items-center justify-between gap-3 lg:hidden">
           <img src={logo} alt="Logo" className="h-10 w-auto sm:h-12" />
 
-<<<<<<< HEAD
-        <div className="flex items-center gap-2 ">
-        
-        </div>
-
-        <div className="flex flex-1 border border-green-600 rounded-md overflow-hidden">
-          <input
-            type="text"
-            placeholder="Search for products..."
-            className="flex-1 px-4 py-2 text-sm outline-none"
-          />
-          <button className="bg-green-600 text-white px-5 py-2 text-sm font-medium">
-            Search
-=======
           <button
             type="button"
             onClick={() => setMobileMenuOpen((prev) => !prev)}
@@ -64,7 +50,6 @@ const Navbar = () => {
             aria-label="Toggle navigation menu"
           >
             {mobileMenuOpen ? "Close" : "Menu"}
->>>>>>> origin/behruz
           </button>
         </div>
 
