@@ -1,21 +1,27 @@
-  import React from "react";
+ import React from "react";
+  import cote1 from "../assets/cote1.png";
+  import cote2 from "../assets/cote2.png";
+  import cote3 from "../assets/cote3.png";
+  import cote4 from "../assets/cote4.png";  
+  import cote5 from "../assets/cote5.png";
+  import cote6 from "../assets/cote6.png";  
 
   const categories = [
-    { name: "Baking material", img: "../assets/cote1.png", count: 11 },
-    { name: "Bread and Juice", img: "../assets/cote2.png", count: 8 },
-    { name: "Clothing & beauty", img: "../assets/cote3.png", count: 4 },
-    { name: "Deals Of The Day", img: "../assets/cote4.png", count: 4 },
-    { name: "Fresh Fruit", img: "../assets/cote5.png", count: 10 },
-    { name: "Fresh Seafood", img: "../assets/cote6.png", count: 5 },
-    { name: "Milks and Dairies", img: "/cote7.png", count: 5 },
-    { name: "Pet Foods & Toy", img: "/cote8.png", count: 2 },
+    { name: "Baking material", img: cote1, count: 11 },
+    { name: "Bread and Juice", img: cote2, count: 8 },
+    { name: "Clothing & beauty", img: cote3, count: 4 },
+    { name: "Deals Of The Day", img:cote4, count: 4 },
+    { name: "Fresh Fruit", img: cote5, count: 10 },
+    { name: "Fresh Seafood", img:cote6, count: 5 },
+    { name: "Milks and Dairies", img: cote4, count: 5 },
+    { name: "Pet Foods & Toy",img:cote2, count: 2 },
   ];
 
   const Category = () => {
     return (
       
       <div>
-        <div className="w-[300px] h-[600px] rounded-2xl p-[31px] border-2 border-[#F2F3F9] m-7">
+        <div className="w-[20%] h-[600px] rounded-2xl p-[31px] border-2 border-[#F2F3F9] m-7">
         
         <div className="w-[240px] h-[50px] border-b mb-[30px] border-[#ECECEC]">
           <h2 className="text-[24px]">Category</h2>
@@ -105,4 +111,4 @@
     );
   };
 
-  export default Category;
+  export default Category; 
